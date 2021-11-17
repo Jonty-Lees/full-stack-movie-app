@@ -5,14 +5,14 @@ const MovieContainer = (props) => {
         <>
             {props.movies.map((movie, index) => (
                 <div className="movieContainer">
-                    <div id='movie_div'>
+                    <>
                         <img src={movie.Poster} alt={`Movie poster of ${movie.Title}`}></img>
                         <h3>{movie.Title}</h3>
                         <button className="button-favourites">
                             Add To <br />
                             Watch Later
                         </button>
-                    </div>
+                    </>
                 </div>
             ))}
         </>
