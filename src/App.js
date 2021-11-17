@@ -4,13 +4,13 @@ import React, { useEffect, useState } from "react";
 import MovieContainer from "./components/MovieContainer";
 import Header from "./components/Header"
 import "bootstrap/dist/css/bootstrap.min.css"
-import axios from 'axios'
 
 
 import "./styles.css";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
+  const [searchValue, setSearchValue] = useState("")
 
 
 // API CALL
@@ -32,7 +32,7 @@ setMovies(response.data.Search)
   }, []);
 
 
-  
+
   return <div>
     <Header />
     <div className='container-fluid movie-app'>
