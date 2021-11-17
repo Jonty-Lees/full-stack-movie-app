@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable */
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { useEffect, useState } from "react";
+import MovieContainer from "./components/MovieContainer";
+import Header from "./components/Header"
+import "bootstrap/dist/css/bootstrap.min.css"
+import axios from 'axios'
+
+
+import "./styles.css";
+
+const App = () => {
+  const [movies, setMovies] = useState([]);
+
+
+// API CALL
+
+const axios = require("axios");
+
+async function apiCall() {
+	const response = await axios ({
+	url: "http://www.omdbapi.com/?s=Avengers&apikey=9c35788e",
+	method: "GET"
+})
+
+console.log(response.data.Search)
+setMovies(response.data.Search)
 }
 
-export default App;
+  useEffect(() => {
+    apiCall();
+  }, []);
+
+
+  
+  return <div>
+    <Header />
+    <div className='container-fluid movie-app'>
+      <div className='row'>
+        <MovieContainer movies={movies} />
+      </div>
+    </div>
+  </div>
+}
+
+export default App
