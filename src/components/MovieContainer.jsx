@@ -1,6 +1,8 @@
 import React from "react";
 
 const MovieContainer = (props) => {
+
+
     return (
         <>
             {props.movies.map((movie, index) => (
@@ -8,7 +10,7 @@ const MovieContainer = (props) => {
                     <>
                         <img src={movie.Poster} alt={`Movie poster of ${movie.Title}`}></img>
                         <h5>{movie.Title}</h5>
-                        <button className="button-favourites">
+                        <button className="button-favourites" onClick={()=> props.handleWatchLaterClick(movie)} >
                             Add To <br />
                             Watch Later
                         </button>
@@ -19,14 +21,4 @@ const MovieContainer = (props) => {
     )
 }
 
-export default MovieContainer;
-{/* <div className="movieContainer">
-                    <div id='movie_div'>
-                        <img src={movie.Poster} alt={`Movie poster of ${movie.Title}`}></img>
-                        <h3>{movie.Title}</h3>
-                        <button className="button-favourites">
-                            Add To <br />
-                            Watch Later
-                        </button>
-                    </div>
-                </div> */}
+export default MovieContainer

@@ -10,6 +10,8 @@
     max-height: 100vh;
 }
 
+/* HEADER */
+
 header {
     padding: 30px 30px;
     background-color: black;
@@ -60,6 +62,8 @@ header button:hover {
     background-color: black;
     margin-left: 8%;
 }
+
+/* HOME PAGE */
 
 .searchBar {
     position: relative;
@@ -247,7 +251,9 @@ footer {
     background-color: #fff;
 }
 
-.movie-app>.row {
+.watchLater-page-app>.row {
     overflow-x: auto;
     flex-wrap: nowrap;
 }
+
+/* WATCH LATER PAGE */
