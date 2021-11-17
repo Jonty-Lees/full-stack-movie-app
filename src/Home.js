@@ -6,6 +6,8 @@ import Header from "./components/Header"
 import SearchBar from './components/Searchbar'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./styles.css";
+import WatchLater from "./WatchLater"
+import WatchLaterContainer from "./components/WatchLaterContainer";
 
 const Home = () => {
   const [movies, setMovies] = useState([]);
@@ -35,7 +37,6 @@ const Home = () => {
   }
 
 
-
   return (
     <div>
       <Header />
@@ -49,7 +50,7 @@ const Home = () => {
           handleWatchLaterClick ={addMovie}
            />
         </div>
-        <watchLater  />
+        
       </div>
     </div>)
 }

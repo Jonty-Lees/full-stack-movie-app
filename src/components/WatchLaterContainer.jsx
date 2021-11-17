@@ -1,10 +1,21 @@
 import React from "react";
 
-const MovieContainer = (props) => {
+const WatchLaterContainer = (props) => {
+
+    // console.log(props.movie)
+
     return (
         <>
+            {props.movies.map((movie, index) => (
+                <div className="movieContainer">
+                    <>
+                        <img src={movie.Poster} alt={`Movie poster of ${movie.Title}`}></img>
+                        <h5>{movie.Title}</h5>
+                    </>
+                </div>
+            ))}
         </>
     )
 }
 
-export default MovieContainer;
+export default WatchLaterContainer

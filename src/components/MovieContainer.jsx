@@ -2,7 +2,6 @@ import React from "react";
 
 const MovieContainer = (props) => {
 
-
     return (
         <>
             {props.movies.map((movie, index) => (
