@@ -1,235 +1,244 @@
 * {
-  background-color: #ececec;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+    background-color: #ececec;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
+
 .App {
-  max-height: 100vh;
+    max-height: 100vh;
 }
 
 header {
-  padding: 30px 30px;
-  background-color: black;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: black;
+    padding: 30px 30px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
 }
 
 .navButtons {
-  text-align: center;
-  background-color: black;
+    text-align: center;
+    background-color: black;
 }
 
 .view-watched {
-  background-color: whitesmoke;
+    background-color: whitesmoke;
 }
 
 .view-watched:hover {
-  background-color: #a8a8a8;
+    background-color: #a8a8a8;
 }
 
 header h2 {
-  color: #f8f8f8;
-  background-color: black;
+    color: #f8f8f8;
+    background-color: black;
 }
 
 header button {
-  padding: 5px 25px;
-  margin-right: 8%;
-  border: none;
-  border-radius: 35px;
-  background-color: rgb(7, 158, 163);
-  transition: all 0.5s ease;
+    padding: 5px 25px;
+    margin-right: 8%;
+    border: none;
+    border-radius: 35px;
+    background-color: rgb(7, 158, 163);
+    transition: all 0.5s ease;
 }
 
 header button:hover {
-  background-color: rgba(7, 158, 163, 0.7);
-  color: white;
+    background-color: rgba(7, 158, 163, 0.7);
+    color: white;
 }
 
 .header-logo {
-  color: rgb(7, 158, 163);
-  font-size: 25px;
-  padding: 10px 5px;
-  border-radius: 10%;
-  border-style: double;
-  background-color: black;
-  margin-left: 8%;
-}
-form input {
-  width: 25rem;
-  text-align: center;
+    color: rgb(7, 158, 163);
+    font-size: 25px;
+    padding: 10px 5px;
+    border-radius: 10%;
+    border-style: double;
+    background-color: black;
+    margin-left: 8%;
 }
 
-form {
-  position: relative;
-  width: 480px;
-  margin: 30px auto 20px auto;
-  background: #fff;
-  padding: 15px;
-  border-radius: 7px;
-  box-shadow: 0 1px 5px rgb(138, 137, 137);
-  display: none;
+.searchBar {
+    position: relative;
+    width: 480px;
+    margin: 30px auto 20px auto;
+    background: #fff;
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
-form button {
-  position: absolute;
-  right: 18px;
-  bottom: -18px;
-  background: rgb(7, 158, 163);
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  outline: none;
-  transition: 0.5s all ease;
+
+.searchBar button {
+    position: absolute;
+    right: 18px;
+    bottom: -18px;
+    background: rgb(7, 158, 163);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    outline: none;
+    transition: 0.5s all ease;
 }
-form button:hover {
-  background-color: rgb(0, 128, 133);
+
+.searchBar button:hover {
+    background-color: rgb(0, 128, 133);
 }
-form input {
-  width: 100%;
-  border: none;
-  padding: 4px;
-  outline: none;
-  font-size: 1.2em;
-  font-family: inherit;
-  resize: none;
-  background-color: white;
+
+.searchBar input {
+    width: 100%;
+    border: none;
+    padding: 4px;
+    outline: none;
+    font-size: 1.2em;
+    font-family: inherit;
+    resize: none;
+    background-color: white;
 }
+
 .h2Title {
-  text-align: center;
-  margin-top: 10px;
+    text-align: center;
+    margin-top: 10px;
 }
+
 .checkbox {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
 footer {
-  position: absolute;
-  text-align: center;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
 }
 
 .movieContainer {
-  background: #fff;
-  border-radius: 7px;
-  box-shadow: 0 2px 5px #ccc;
-  padding: 10px;
-  padding-bottom: 10px;
-  max-width: 200px;
-  /* min-width: 190px; */
-
-  margin: 16px 16px 16px 16px;
-  float: left;
-  text-align: center;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 10px;
+    padding-bottom: 10px;
+    max-width: 200px;
+    margin: 16px 16px 16px 16px;
+    float: left;
+    text-align: center;
 }
 
 .movieContainer img {
-  max-width: 180px;
+    max-width: 180px;
 }
-.searchContainerBox {
-  display: flex;
-  overflow-x: auto;
-  flex-wrap: nowrap;
-  margin-bottom: 20px;
+
+.searchContainerBar {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
 }
+
 .movieContainerBox {
-  display: flex;
-  overflow-x: auto;
-  flex-wrap: nowrap;
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
 }
 
 .movieContainer button,
 .movieContainer h3,
 .movieContainer p {
-  background-color: #fff;
+    background-color: #fff;
 }
 
 .movieContainer h3 {
-  color: rgb(2, 130, 134);
-  margin-bottom: 2px;
+    color: rgb(2, 130, 134);
+    margin-bottom: 2px;
 }
+
 .movieContainer p {
-  margin-bottom: 4px;
+    margin-bottom: 4px;
 }
+
 .movieContainer button {
-  padding: 5px 25px;
-  margin: 3px 2px 4px 2px;
-  border: none;
-  border-radius: 5px;
-  background-color: rgb(7, 158, 163);
-  transition: all 0.5s ease;
-  color: #fff;
+    padding: 5px 25px;
+    margin: 3px 2px 4px 2px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(7, 158, 163);
+    transition: all 0.5s ease;
+    color: #fff;
 }
+
 .movieContainer button:hover {
-  background-color: rgb(0, 128, 133);
+    background-color: rgb(0, 128, 133);
 }
 
 .button-delete {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .page-buttons {
-  position: absolute;
-  text-align: center;
-  bottom: 0;
-  margin: 8rem 0rem;
-  width: 100%;
-  height: 2.5rem;
-  background-color: transparent;
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    margin: 8rem 0rem;
+    width: 100%;
+    height: 2.5rem;
+    background-color: transparent;
 }
+
 .page-buttons p {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 .EditOrderButton:hover,
 .DeleteAllButton:hover,
 .DeleteWatchedButton:hover {
-  background-color: rgb(0, 128, 133);
+    background-color: rgb(0, 128, 133);
 }
+
 .EditOrderButton {
-  font-size: 15px;
-  padding: 5px 25px;
-  border: none;
-  border-radius: 35px;
-  background-color: rgb(7, 158, 163);
-  transition: all 0.5s ease;
-  margin: 10px 0px;
-  display: none;
+    font-size: 15px;
+    padding: 5px 25px;
+    border: none;
+    border-radius: 35px;
+    background-color: rgb(7, 158, 163);
+    transition: all 0.5s ease;
+    margin: 10px 0px;
+    display: none;
 }
+
 .DeleteAllButton,
 .DeleteWatchedButton {
-  font-size: 15px;
-  margin: 0px 5px 10px 5px;
-  padding: 5px 25px;
-  border: none;
-  border-radius: 35px;
-  background-color: rgb(7, 158, 163);
-  transition: all 0.5s ease;
-  position: relative;
-  bottom: -80px;
+    font-size: 15px;
+    margin: 0px 5px 10px 5px;
+    padding: 5px 25px;
+    border: none;
+    border-radius: 35px;
+    background-color: rgb(7, 158, 163);
+    transition: all 0.5s ease;
+    position: relative;
+    bottom: -80px;
 }
 
 .starRadio {
-  display: none;
-  background-color: #fff;
-}
-.star {
-  background-color: #fff;
-}
-.starRatingContainer {
-  background-color: #fff;
+    display: none;
+    background-color: #fff;
 }
 
-.movie-app > .row {
-  overflow-x: auto;
-  flex-wrap: nowrap;
+.star {
+    background-color: #fff;
+}
+
+.starRatingContainer {
+    background-color: #fff;
+}
+
+.movie-app>.row {
+    overflow-x: auto;
+    flex-wrap: nowrap;
 }
