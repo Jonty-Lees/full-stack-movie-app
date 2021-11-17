@@ -7,7 +7,7 @@ const MovieContainer = (props) => {
                 <div className="movieContainer">
                     <>
                         <img src={movie.Poster} alt={`Movie poster of ${movie.Title}`}></img>
-                        <h3>{movie.Title}</h3>
+                        <h5>{movie.Title}</h5>
                         <button className="button-favourites">
                             Add To <br />
                             Watch Later
