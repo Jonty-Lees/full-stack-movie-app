@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import MovieContainer from "./components/MovieContainer";
 import Header from "./components/Header"
 import SearchBar from './components/Searchbar'
+import Navigation from "./components/Navigation";
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./styles.css";
 import WatchLaterContainer from './components/WatchLaterContainer'
@@ -17,6 +18,7 @@ const WatchLater = (props) => {
     <div>
     <h1>HELLO WORLD</h1>
       <Header />
+      <Navigation />
       <div className='container-fluid watchLater-page-app'>
         <div className='row'>
           <WatchLaterContainer 

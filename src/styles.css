@@ -256,6 +256,20 @@ footer {
     flex-wrap: nowrap;
 }
 
+/* NAV */
+
+.nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+
+}
+
+.nav span {
+    margin: 0px 20px 0px 20px;
+}
+
 /* WATCH LATER PAGE */
 
 

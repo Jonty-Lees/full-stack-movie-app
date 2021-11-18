@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import MovieContainer from "./components/MovieContainer";
 import Header from "./components/Header"
 import SearchBar from './components/Searchbar'
+import Navigation  from "./components/Navigation";
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./styles.css";
 
@@ -35,6 +36,7 @@ const Home = (props) => {
   return (
     <div>
       <Header />
+      <Navigation />
       <div className='container-fluid home-page-app'>
         <div>
           <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
