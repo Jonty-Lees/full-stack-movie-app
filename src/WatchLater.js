@@ -10,15 +10,19 @@ import WatchLaterContainer from './components/WatchLaterContainer'
 
 const WatchLater = (props) => {
 
-
+  console.log('WatchLater watchLater', props.watchLater)
+  console.log('WatchLater Movie', props.movies)
 
   return (
     <div>
     <h1>HELLO WORLD</h1>
       <Header />
-      <div className='container-fluid movie-app'>
+      <div className='container-fluid watchLater-page-app'>
         <div className='row'>
-          {/* <WatchLaterContainer /> */}
+          <WatchLaterContainer 
+            movies = {props.movies}
+            watchLater ={props.watchLater}
+          />
         </div>
       </div>
     </div>)

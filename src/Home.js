@@ -29,23 +29,20 @@ const Home = (props) => {
   }, [searchValue]);
 
 
-  // const addMovie = (movie) => {
-  //   const newWatchLaterList = [...watchLater, movie];
-  //   setWatchLater(newWatchLaterList)
-  // }
+
 
 
   return (
     <div>
       <Header />
-      <div className='container-fluid watchLater-page-app'>
+      <div className='container-fluid home-page-app'>
         <div>
           <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
         </div>
         <div className='row'>
           <MovieContainer
             movies={props.movies}
-          // handleWatchLaterClick ={addMovie}
+            handleWatchLaterClick ={props.addMovie}
           />
         </div>
 

@@ -2,7 +2,6 @@ import React from "react";
 
 const MovieContainer = (props) => {
 
-    console.log("12",props)
 
     return (
         <>

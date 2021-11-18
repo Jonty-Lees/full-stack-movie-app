@@ -13,8 +13,16 @@ import WatchLater from "./WatchLater";
 const App = () => {
 
   const [movies, setMovies] = useState([]);
-  const [watchLater, setWatchLater] = useState([]);
 
+const [watchLater, setWatchLater] = useState([]);
+
+
+const addMovie = (movie) => {
+  const newWatchLaterList = [...watchLater, movie];
+  setWatchLater(newWatchLaterList)
+}
+
+console.log('APP', watchLater)
 
   return (
     <div>
@@ -22,10 +30,17 @@ const App = () => {
         <Route exact path='/' element={
           <Home
             movies={movies}
-            setMovies={setMovies} />
+            setMovies={setMovies}
+            watchLater ={watchLater}
+            setWatchLater = {setWatchLater}
+            addMovie = {addMovie} />
         } />
         <Route path='/watchlater' element={
-          <WatchLater />
+          <WatchLater 
+            addMovie = {addMovie}
+            movies={watchLater}
+            setWatchLater = {setWatchLater}
+          />
         } />
 
       </Routes>

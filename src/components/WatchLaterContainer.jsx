@@ -2,7 +2,7 @@ import React from "react";
 
 const WatchLaterContainer = (props) => {
 
-    // console.log(props.movie)
+    console.log("PROPS MOVIES", props)
 
     return (
         <>

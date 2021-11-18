@@ -251,9 +251,15 @@ footer {
     background-color: #fff;
 }
 
-.watchLater-page-app>.row {
+.home-page-app>.row {
     overflow-x: auto;
     flex-wrap: nowrap;
 }
 
 /* WATCH LATER PAGE */
+
+
+.watchLater-page-app>.row {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+}
