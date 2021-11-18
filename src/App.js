@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-import React from "react";
+import React, { useState } from "react";
 import { render } from "react-dom";
 import {
   BrowserRouter,
@@ -12,13 +12,17 @@ import WatchLater from "./WatchLater";
 
 const App = () => {
 
+  const [movies, setMovies] = useState([]);
+  const [watchLater, setWatchLater] = useState([]);
 
-  
+
   return (
     <div>
       <Routes>
         <Route exact path='/' element={
-          <Home />
+          <Home
+            movies={movies}
+            setMovies={setMovies} />
         } />
         <Route path='/watchlater' element={
           <WatchLater />

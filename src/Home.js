@@ -6,12 +6,9 @@ import Header from "./components/Header"
 import SearchBar from './components/Searchbar'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./styles.css";
-import WatchLater from "./WatchLater"
-import WatchLaterContainer from "./components/WatchLaterContainer";
 
-const Home = () => {
-  const [movies, setMovies] = useState([]);
-  const [watchLater, setWatchLater] = useState([]);
+
+const Home = (props) => {
   const [searchValue, setSearchValue] = useState("");
 
 
@@ -20,21 +17,22 @@ const Home = () => {
   const axios = require("axios");
 
   useEffect(() => {
-    async function apiCall(searchValue) {
+    async function apiCall() {
       const response = await axios.get(`http://www.omdbapi.com/?s=${searchValue}&apikey=9c35788e`);
 
       if (response.data.Search) {
-        setMovies(response.data.Search);
+        props.setMovies(response.data.Search);
       }
+
     }
     apiCall(searchValue);
   }, [searchValue]);
 
 
-  const addMovie = (movie) =>{
-    const newWatchLaterList = [...watchLater, movie];
-    setWatchLater(newWatchLaterList)
-  }
+  // const addMovie = (movie) => {
+  //   const newWatchLaterList = [...watchLater, movie];
+  //   setWatchLater(newWatchLaterList)
+  // }
 
 
   return (
@@ -45,12 +43,12 @@ const Home = () => {
           <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
         </div>
         <div className='row'>
-          <MovieContainer 
-          movies ={movies} 
-          handleWatchLaterClick ={addMovie}
-           />
+          <MovieContainer
+            movies={props.movies}
+          // handleWatchLaterClick ={addMovie}
+          />
         </div>
-        
+
       </div>
     </div>)
 }
