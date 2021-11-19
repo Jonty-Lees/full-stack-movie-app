@@ -8,15 +8,16 @@ import Navigation from "./components/Navigation";
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./styles.css";
 import WatchLaterContainer from './components/WatchLaterContainer'
+import ExternalBtn from "./components/ExternalBtn";
 
 const WatchLater = (props) => {
 
   console.log('WatchLater watchLater', props.watchLater)
   console.log('WatchLater Movie', props.movies)
 
+
   return (
     <div>
-    <h1>HELLO WORLD</h1>
       <Header />
       <Navigation />
       <div className='container-fluid watchLater-page-app'>
@@ -24,9 +25,11 @@ const WatchLater = (props) => {
           <WatchLaterContainer 
             movies = {props.movies}
             watchLater ={props.watchLater}
+            deleteMovie ={props.deleteMovie}
           />
         </div>
       </div>
+      <ExternalBtn deleteAll ={props.deleteAll} />
     </div>)
 }
 

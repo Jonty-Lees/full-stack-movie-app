@@ -45,6 +45,7 @@ const Home = (props) => {
           <MovieContainer
             movies={props.movies}
             handleWatchLaterClick ={props.addMovie}
+          
           />
         </div>
 

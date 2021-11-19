@@ -10,9 +10,11 @@ const MovieContainer = (props) => {
                     <>
                         <img src={movie.Poster} alt={`Movie poster of ${movie.Title}`}></img>
                         <h5>{movie.Title}</h5>
-                        <button className="button-favourites" onClick={()=> props.handleWatchLaterClick(movie)} >
-                            Add To <br />
-                            Watch Later
+                        <button 
+                        className="button-favourites" 
+                        onClick={()=> props.handleWatchLaterClick(movie)} >
+                            <span id="try"> Add To <br />
+                            Watch Later</span>
                         </button>
                     </>
                 </div>

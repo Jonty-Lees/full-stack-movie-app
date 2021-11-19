@@ -204,6 +204,10 @@ footer {
     background-color: transparent;
 }
 
+.button-favourites span{
+    background-color: transparent;
+}
+
 .page-buttons p {
     background-color: transparent;
 }

@@ -16,13 +16,26 @@ const App = () => {
 
 const [watchLater, setWatchLater] = useState([]);
 
+console.log(movies)
+
+ 
 
 const addMovie = (movie) => {
   const newWatchLaterList = [...watchLater, movie];
   setWatchLater(newWatchLaterList)
 }
 
-console.log('APP', watchLater)
+const deleteWatchLaterMovie =(movie)=>{
+  const newWatchLaterList = watchLater.filter(
+    (watchLater) => watchLater.imdbID !== movie.imdbID
+    )
+    setWatchLater(newWatchLaterList)
+}
+
+const deleteAllMovies =(movie)=>{
+    setWatchLater([])
+}
+
 
   return (
     <div>
@@ -33,13 +46,16 @@ console.log('APP', watchLater)
             setMovies={setMovies}
             watchLater ={watchLater}
             setWatchLater = {setWatchLater}
-            addMovie = {addMovie} />
+            addMovie = {addMovie}
+            />
         } />
         <Route path='/watchlater' element={
           <WatchLater 
             addMovie = {addMovie}
             movies={watchLater}
             setWatchLater = {setWatchLater}
+            deleteMovie = {deleteWatchLaterMovie}
+            deleteAll = {deleteAllMovies}
           />
         } />
 

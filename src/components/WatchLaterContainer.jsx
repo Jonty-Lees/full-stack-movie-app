@@ -11,6 +11,9 @@ const WatchLaterContainer = (props) => {
                     <>
                         <img src={movie.Poster} alt={`Movie poster of ${movie.Title}`}></img>
                         <h5>{movie.Title}</h5>
+                        <button className="button-delete" onClick={()=> props.deleteMovie(movie)} >
+                            Delete Movie
+                        </button>
                     </>
                 </div>
             ))}
