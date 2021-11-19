@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { render } from "react-dom";
 import {
   BrowserRouter,
@@ -16,14 +16,12 @@ const App = () => {
 
 const [watchLater, setWatchLater] = useState([]);
 
-console.log(movies)
-
- 
 
 const addMovie = (movie) => {
   const newWatchLaterList = [...watchLater, movie];
   setWatchLater(newWatchLaterList)
 }
+
 
 const deleteWatchLaterMovie =(movie)=>{
   const newWatchLaterList = watchLater.filter(
