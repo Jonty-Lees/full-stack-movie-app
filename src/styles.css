@@ -270,6 +270,18 @@ footer {
     margin: 0px 20px 0px 20px;
 }
 
+#nav-link{
+    font-size: 15px;
+    padding: 5px 25px;
+    border: none;
+    border-radius: 35px;
+    background-color: rgb(7, 158, 163);
+    transition: all 0.5s ease;
+    text-decoration: none;
+    color: white;
+
+}
+
 /* WATCH LATER PAGE */
 
 
