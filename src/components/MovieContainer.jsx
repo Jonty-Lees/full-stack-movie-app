@@ -13,8 +13,7 @@ const MovieContainer = (props) => {
                         <button 
                         className="button-favourites" 
                         onClick={()=> props.handleWatchLaterClick(movie)} >
-                            <span id="try"> Add To <br />
-                            Watch Later</span>
+                            <span> Add To <br /> Watch Later </span>
                         </button>
                     </>
                 </div>
