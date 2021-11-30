@@ -13,26 +13,40 @@ import WatchLater from "./WatchLater";
 const App = () => {
 
   const [movies, setMovies] = useState([]);
+  const [watchLater, setWatchLater] = useState([]);
 
-const [watchLater, setWatchLater] = useState([]);
+  const addMovie = (movie) => {
+    if (movie.imdbID !== watchLater.imdbID) {
+      alert(`You Have Successfully added ${movie.Title} To Your Watch Later List!!`)
+      const newWatchLaterList = [...watchLater, movie];
+      const newMovieList = movies.filter((movies) =>
+        movies.imdbID !== movie.imdbID
+      )
+      setMovies(newMovieList)
+      setWatchLater(newWatchLaterList)
+    } else {
+      print('You have already adde this movie to your watch list')
+    }
+  }
 
 
-const addMovie = (movie) => {
-  const newWatchLaterList = [...watchLater, movie];
-  setWatchLater(newWatchLaterList)
-}
 
+  // const changeLabel = (movie) => {
+  //   if ()
+  // }
 
-const deleteWatchLaterMovie =(movie)=>{
-  const newWatchLaterList = watchLater.filter(
-    (watchLater) => watchLater.imdbID !== movie.imdbID
+  const deleteWatchLaterMovie = (movie) => {
+    const newWatchLaterList = watchLater.filter(
+      (watchLater) => watchLater.imdbID !== movie.imdbID
     )
     setWatchLater(newWatchLaterList)
-}
+  }
 
-const deleteAllMovies =(movie)=>{
+  const deleteAllMovies = (movie) => {
     setWatchLater([])
-}
+  }
+
+
 
 
   return (
@@ -42,18 +56,18 @@ const deleteAllMovies =(movie)=>{
           <Home
             movies={movies}
             setMovies={setMovies}
-            watchLater ={watchLater}
-            setWatchLater = {setWatchLater}
-            addMovie = {addMovie}
-            />
+            watchLater={watchLater}
+            setWatchLater={setWatchLater}
+            addMovie={addMovie}
+          />
         } />
         <Route path='/watchlater' element={
-          <WatchLater 
-            addMovie = {addMovie}
+          <WatchLater
+            addMovie={addMovie}
             movies={watchLater}
-            setWatchLater = {setWatchLater}
-            deleteMovie = {deleteWatchLaterMovie}
-            deleteAll = {deleteAllMovies}
+            setWatchLater={setWatchLater}
+            deleteMovie={deleteWatchLaterMovie}
+            deleteAll={deleteAllMovies}
           />
         } />
 
