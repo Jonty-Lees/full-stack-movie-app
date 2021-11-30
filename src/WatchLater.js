@@ -26,6 +26,7 @@ const WatchLater = (props) => {
             movies = {props.movies}
             watchLater ={props.watchLater}
             deleteMovie ={props.deleteMovie}
+            watchedMovie ={props.watchedMovie}
           />
         </div>
       </div>

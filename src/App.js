@@ -14,6 +14,7 @@ const App = () => {
 
   const [movies, setMovies] = useState([]);
   const [watchLater, setWatchLater] = useState([]);
+  const [watched, setWatched] = useState('')
 
   const addMovie = (movie) => {
     if (movie.imdbID !== watchLater.imdbID) {
@@ -46,6 +47,15 @@ const App = () => {
     setWatchLater([])
   }
 
+  const watchedMovie = (event) => {
+    if (document.querySelector(".button-watched").innerHTML === 'Seen It?') {
+      document.querySelector(".button-watched").innerHTML = "Watched"
+    } else if (document.querySelector(".button-watched").innerHTML === 'Watched') {
+      document.querySelector(".button-watched").innerHTML = "Seen It?"
+    }
+  }
+
+
 
 
 
@@ -68,6 +78,7 @@ const App = () => {
             setWatchLater={setWatchLater}
             deleteMovie={deleteWatchLaterMovie}
             deleteAll={deleteAllMovies}
+            watchedMovie={watchedMovie}
           />
         } />
 
