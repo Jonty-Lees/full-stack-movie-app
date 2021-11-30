@@ -2,8 +2,6 @@ import React from "react";
 
 const WatchLaterContainer = (props) => {
 
-    console.log("PROPS MOVIES", props)
-
     return (
         <>
             {props.movies.map((movie, index) => (
@@ -13,6 +11,9 @@ const WatchLaterContainer = (props) => {
                         <h5>{movie.Title}</h5>
                         <button className="button-delete" onClick={()=> props.deleteMovie(movie)} >
                             Delete Movie
+                        </button>
+                        <button className="button-watched" onClick={()=> props.watchedMovie(movie)} >
+                            Seen It?
                         </button>
                     </>
                 </div>
